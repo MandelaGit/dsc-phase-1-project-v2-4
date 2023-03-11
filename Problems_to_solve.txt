@@ -1,0 +1,26 @@
+The best performing movies over the years - with regard to revenue/rating
+The best performing genres between 2010 and 2020 - with regard to revenue
+The directors behind the best perfoming movies.
+Most successful studios - spell out Microsoft's competition.
+The writers of the best performing films. 
+Year vs revenue -- 
+
+
+
+
+--Filled the missing values
+--Calculated the mean of domestic gross
+--movie_gross_grouping = movie_gross.groupby("studio")["domestic_gross"].mean()
+--Sort studio vs Domestic gross - visualize the best performing studios
+--
+
+
+Genre vs. Number of Votes
+--Merge two dfs to find correlating values of numvotes and genres
+--Groupby
+
+key_genre= pd.DataFrame(df4.groupby("genres")["numvotes"].mean()).sort_values(by="numvotes", ascending= False).iloc[:10]
+key_genre
+
+--Sort by numvotes
+--Visualize genre vs numvotes
